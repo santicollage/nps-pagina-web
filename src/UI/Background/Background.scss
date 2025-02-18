@@ -1,0 +1,24 @@
+$mobile-bg: url(../../assets/Images/Background/Background-movile-750.jpg);
+$desktop-bg: url(../../assets/Images/Background/Background-desktop-1920.jpg);
+$desktop-big-bg: url(../../assets/Images/Background/Background-big-desktop-2560.jpg);
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100vw;
+  height: 100vh;
+  background-image: $mobile-bg;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    background-image: $desktop-bg;
+  }
+  
+  @media (min-width: 1200px) {
+    background-image: $desktop-big-bg;
+  }
+}
