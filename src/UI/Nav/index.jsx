@@ -21,7 +21,8 @@ function Nav() {
 
   //Handle the navigation in products
   const handleNavigation = (slug) => {
-    navigate(`/productos/${slug}`);
+
+    navigate(`/products/${slug}`);
     setIsMenuOpen(false);
   };
 
@@ -37,8 +38,8 @@ function Nav() {
 
         {
           size > 768 ? 
-          (
-            <nav className="nav--desktop">
+          //nav desktop
+          (<nav className="nav--desktop">
               <ul className="nav-list">
                 <li><NavLink className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/" >INICIO</NavLink></li>
                 <li>
@@ -46,7 +47,7 @@ function Nav() {
                   className={({ isActive }) => `link ${isActive ? "active" : ""}`} 
                   onMouseEnter={() => setIsMenuOpen(true)}
                   onMouseLeave={() => setTimeout(() => setIsMenuOpen(false), 100)}
-                  to="/Products">
+                  to="/products">
                     PRODUCTOS 
                     <div className="products-icon"></div>
 
@@ -54,28 +55,27 @@ function Nav() {
                       className={`submenu-container ${isMenuOpen ? 'open' : ''}`} 
                       onMouseEnter={() => setIsMenuOpen(true)}
                       onMouseLeave={() => setTimeout(() => setIsMenuOpen(false), 50)}>
-                        <button onClick={() => handleNavigation("motor")} className="submenu-button">
+                        <button onClick={(event) => {event.preventDefault(); handleNavigation("motor")}} className="submenu-button">
                           MOTOR
                         </button>
                         <div className="line"></div>
-                        <button onClick={() => handleNavigation("caja-transmision")} className="submenu-button">
+                        <button onClick={(event) => {event.preventDefault(); handleNavigation("caja-transmision")}} className="submenu-button">
                           TRANSMISIÓN
                         </button>
                         <div className="line"></div>
-                        <button onClick={() => handleNavigation("suspencion")} className="submenu-button">
+                        <button onClick={(event) => {event.preventDefault(); handleNavigation("suspencion")}} className="submenu-button">
                           SUSPENSIÓN
                         </button>
                       </div>
                       
                       </NavLink>
                     </li>
-                    <li><NavLink className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/Us">NOSOTROS</NavLink></li>
+                    <li><NavLink className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/us">NOSOTROS</NavLink></li>
                   </ul>
-                </nav>
-          ) 
+                </nav>) 
           : 
-          (
-            <nav className="nav--mobile">
+          //nav mobile
+          (<nav className="nav--mobile">
               <button  className={`hamburger-button ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 <span></span>
                 <span></span>
@@ -85,19 +85,19 @@ function Nav() {
                   <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
                     <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/" >INICIO</NavLink></li>
                     <div className="line"></div>
-                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/Products">PRODUCTOS</NavLink></li>
+                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/products">PRODUCTOS</NavLink></li>
                     <div className="line sub-line"></div>
-                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/Products/motor">MOTOR</NavLink></li>
+                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/products/motor">MOTOR</NavLink></li>
                     <div className="line sub-line"></div>
-                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/Products/transmision">TRANSMISIÓN</NavLink></li>
+                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/products/transmision">TRANSMISIÓN</NavLink></li>
                     <div className="line sub-line"></div>
-                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/Products/suspension">SUSPENSIÓN</NavLink></li>
+                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/products/suspension">SUSPENSIÓN</NavLink></li>
                     <div className="line"></div>
-                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/Us">NOSOTROS</NavLink></li>
+                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/us">NOSOTROS</NavLink></li>
                   </ul>
                 
-            </nav>
-          )}
+            </nav>)
+        }
         
       </header>
     </>

@@ -1,0 +1,53 @@
+@import '../../_variables.scss';
+
+footer {
+  width: 100vw;
+  padding: 20px 5vw;
+  background-color: $primary-color-light;
+  backdrop-filter: blur(2px);
+
+  .footer-title {
+    font-size: 1.2rem;
+    font-family: "Archivo Black", sans-serif;
+  }
+  .footer-contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 10vw;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 5px 50px;
+
+      @media (max-width: 768px) {
+        margin: 5px 20px;
+      }
+
+      .footer-icon {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .footer-text {
+        font-size: 1rem;
+      }
+    }
+  }
+  .footer-terms {
+    margin-top: 10px;
+    font-size: 0.6rem;
+    text-align: start;
+  }
+}
