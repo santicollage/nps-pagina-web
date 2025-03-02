@@ -1,10 +1,21 @@
 import './Home.scss';
+import { Slider } from '../../UI/Slider';
+import { Benefits } from '../../UI/Benefits';
+import { Map } from '../../UI/Map';
 
 function Home() {
   
   return (
     <>
-      <h1 className="title">Home</h1> 
+      <section>
+        <Slider/>
+      </section>
+      <section>
+        <Benefits/>
+      </section>
+      <section>
+        <Map/>
+      </section>
       
     </>
   )

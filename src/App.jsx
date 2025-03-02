@@ -1,10 +1,11 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import { Background } from './UI/Background';
 import { Home } from './Routes/Home';
 import { Products } from './Routes/Products';
 import { Us } from './Routes/Us';
 import { Nav } from './UI/Nav';
+import { ContactButton } from './UI/ContactButton';
 import { Footer } from './UI/Footer';
+import { Background } from './UI/Background';
 
 function App() {
 
@@ -13,6 +14,8 @@ function App() {
       <HashRouter>
 
         <Nav/>
+
+        <ContactButton/>
 
         <Routes>
           <Route path='/' element={<Home/>} />

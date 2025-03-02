@@ -1,0 +1,51 @@
+@import '../../_variables.scss';
+
+.line-glow {
+  @include line-glow;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80%;
+  height: 3px;
+  transform: translate(-50%, -50%);
+  .glow {
+    background-image: url("../../assets/Icons/Icons-UI/glow.png");
+    left: 30%;
+    @media (max-width: 768px) {
+      left: 10%;
+    }
+  }
+}
+.benefits-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  @media (min-width: 1000px) {
+    justify-content: center;
+  }
+  .benefit {
+    @include card-style;
+    align-items: start;
+    position: relative;
+    width: 250px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    @media (min-width: 1000px) {
+      width: 300px;
+      margin: 0 20px 20px 20px;
+    }
+    .benefit-text {
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+    }
+    .benefit-icon {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+}

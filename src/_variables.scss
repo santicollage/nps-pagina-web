@@ -3,6 +3,7 @@ $primary-color-light: #0d0d0ea7;
 $primary-color-hard: #0d0d0edc;
 $secondary-color: #D9D9D9;
 $tertiary-color: #7F7F7F;
+$quaternary-color: #7f7f7f27;
 
 @mixin button-style {
   appearance: none; 
@@ -18,11 +19,29 @@ $tertiary-color: #7F7F7F;
 }
 
 @mixin card-style {
-  background-color: $tertiary-color;
+  background-color: $quaternary-color;
   color: white;
-  border-radius: 15px;
-  backdrop-filter: blur(70px);
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+@mixin line-glow {
+  background: linear-gradient(90deg, #52505100 0%, #52505179 15%, #F8F8F8 40%, #61616380 75%, #61616300 100%);
+  border-radius: 10px;
+  position: relative;
+  .glow {
+    background-size: cover;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    transform-origin: center;
+    transform: rotate(45deg) translate(0%, -70%);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
 }

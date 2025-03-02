@@ -63,7 +63,7 @@ function Nav() {
                           TRANSMISIÓN
                         </button>
                         <div className="line"></div>
-                        <button onClick={(event) => {event.preventDefault(); handleNavigation("suspencion")}} className="submenu-button">
+                        <button onClick={(event) => {event.preventDefault(); handleNavigation("suspension")}} className="submenu-button">
                           SUSPENSIÓN
                         </button>
                       </div>

@@ -22,7 +22,12 @@
 }
 
 #root {
+  position: relative;
   min-height: 100vh;
+  padding-top: 75px;
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
 }
 
 a {
@@ -37,6 +42,7 @@ ul, ol {
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   display: flex;
   place-items: center;
