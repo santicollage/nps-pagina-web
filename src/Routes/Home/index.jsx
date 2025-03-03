@@ -1,7 +1,7 @@
 import './Home.scss';
 import { Slider } from '../../UI/Slider';
 import { Benefits } from '../../UI/Benefits';
-import { Map } from '../../UI/Map';
+import { MapNps } from '../../UI/MapNps';
 
 function Home() {
   
@@ -14,7 +14,7 @@ function Home() {
         <Benefits/>
       </section>
       <section>
-        <Map/>
+        <MapNps/>
       </section>
       
     </>

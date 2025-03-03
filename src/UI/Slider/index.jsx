@@ -26,12 +26,12 @@ function Slider() {
     }
   }
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setPosition(prev => prev >= numberSliders ? prev = 1 : prev + 1);
-  //   }, 6000);
-  //   return () => clearInterval(interval);
-  // }, [position]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPosition(prev => prev >= numberSliders ? prev = 1 : prev + 1);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [position]);
   
   return (
     <div className='slider-container'>
