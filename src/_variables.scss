@@ -5,6 +5,19 @@ $secondary-color: #D9D9D9;
 $tertiary-color: #7F7F7F;
 $quaternary-color: #7f7f7f27;
 
+@mixin section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  padding: 40px 10vw;
+  
+  @media (max-width: 768px) {
+    padding: 30px 10vw;
+  }
+}
+
 @mixin button-style {
   appearance: none; 
   background-color: $secondary-color; 
@@ -32,7 +45,7 @@ $quaternary-color: #7f7f7f27;
 @mixin line-glow {
   background: linear-gradient(90deg, #52505100 0%, #52505179 15%, #F8F8F8 40%, #61616380 75%, #61616300 100%);
   border-radius: 10px;
-  position: relative;
+  position: absolute;
   .glow {
     background-size: cover;
     background-position: center;

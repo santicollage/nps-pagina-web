@@ -1,0 +1,14 @@
+@import '../../_variables.scss';
+
+section {
+  @include section;
+}
+
+.us-title {
+  margin-top: 20px;
+  font-size: 2rem;
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
