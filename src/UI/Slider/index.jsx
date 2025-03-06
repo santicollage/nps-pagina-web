@@ -2,7 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Lines } from '../Lines';
 import './Slider.scss';
-import velocimetro from '../../assets/Images/Slider/velocimetro.png';
+import velocimetro1 from '../../assets/Images/Slider/velocimetro1.svg';
+import velocimetro2 from '../../assets/Images/Slider/velocimetro2.svg';
 import piston from '../../assets/Images/Slider/piston.png';
 import caja from '../../assets/Images/Slider/caja.png';
 import suspension from '../../assets/Images/Slider/suspension.png';
@@ -29,7 +30,7 @@ function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setPosition(prev => prev >= numberSliders ? prev = 1 : prev + 1);
-    }, 6000);
+    }, 7000);
     return () => clearInterval(interval);
   }, [position]);
   
@@ -39,8 +40,9 @@ function Slider() {
       <button onClick={() => setPosition(prev => prev >= numberSliders ? prev = 1 : prev + 1)} className='slider-button button-right'></button>
 
       <div className='slider-card' style={{transform: `translateX(${calculatePosition(1)}%)`, opacity: position === 1 ? 1 : 0}}>
-      <div className='slider-image'>
-          <img className='image' src={velocimetro} alt='velocimetro'/>
+        <div className='slider-image'>
+          <img className='image speedometer' src={velocimetro1} alt='velocimetro'/>
+          <img className='image speedometer needle' src={velocimetro2} alt='velocimetro'/>
         </div>
         <div className='slider-text'>
           <h1 className='tittle text-right'>SERVICIO Y CALIDAD EN UN SOLO LUGAR</h1>
