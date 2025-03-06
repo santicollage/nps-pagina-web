@@ -59,7 +59,11 @@ function Nav() {
                           MOTOR
                         </button>
                         <div className="line"></div>
-                        <button onClick={(event) => {event.preventDefault(); handleNavigation("caja-transmision")}} className="submenu-button">
+                        <button onClick={(event) => {event.preventDefault(); handleNavigation("caja")}} className="submenu-button">
+                          CAJA
+                        </button>
+                        <div className="line"></div>
+                        <button onClick={(event) => {event.preventDefault(); handleNavigation("transmision")}} className="submenu-button">
                           TRANSMISIÓN
                         </button>
                         <div className="line"></div>
@@ -88,6 +92,8 @@ function Nav() {
                     <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link ${isActive ? "active" : ""}`} to="/products">PRODUCTOS</NavLink></li>
                     <div className="line sub-line"></div>
                     <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/products/motor">MOTOR</NavLink></li>
+                    <div className="line sub-line"></div>
+                    <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/products/caja">CAJA</NavLink></li>
                     <div className="line sub-line"></div>
                     <li><NavLink onClick={toggleMenu} className={({ isActive }) => `link sub-link ${isActive ? "active" : ""}`} to="/products/transmision">TRANSMISIÓN</NavLink></li>
                     <div className="line sub-line"></div>

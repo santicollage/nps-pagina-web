@@ -70,7 +70,7 @@ function Slider() {
         <div className='slider-text'>
           <h1 className='tittle'>CAJA Y TRANSMISIÓN</h1>
           <p className='text'>Su vehículo merece lo mejor: Más de 30 marcas líderes en repuestos, calidad y confianza al alcance de su mano.</p>
-          <button onClick={() => handleNavigate('caja-transmision')} className='button'> <div className='glow'></div>VER MÁS</button>
+          <button onClick={() => handleNavigate('caja')} className='button'> <div className='glow'></div>VER MÁS</button>
         </div>
       </div>
 
