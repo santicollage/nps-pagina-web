@@ -4,7 +4,9 @@ import { Lines } from '../Lines';
 import './Slider.scss';
 import velocimetro1 from '../../assets/Images/Slider/velocimetro1.svg';
 import velocimetro2 from '../../assets/Images/Slider/velocimetro2.svg';
-import piston from '../../assets/Images/Slider/piston.png';
+import piston1 from '../../assets/Images/Slider/pistons1.svg';
+import piston2 from '../../assets/Images/Slider/pistons2.svg';
+import piston3 from '../../assets/Images/Slider/pistons3.svg';
 import caja from '../../assets/Images/Slider/caja.png';
 import suspension from '../../assets/Images/Slider/suspension.png';
 
@@ -59,7 +61,9 @@ function Slider() {
           <button onClick={() => handleNavigate('motor')} className='button'><div className='glow'></div>VER MÁS</button>
         </div>
         <div className='slider-image'>
-          <img className='image' src={piston} alt='piston'/>
+          <img className='image pistons' src={piston1} alt='piston'/>
+          <img className='image pistons pistons1' src={piston2} alt='piston'/>
+          <img className='image pistons pistons2' src={piston3} alt='piston'/>
           <div className='shadow'></div>
         </div>
       </div>

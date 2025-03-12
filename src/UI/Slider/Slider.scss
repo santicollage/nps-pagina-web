@@ -27,6 +27,15 @@
   }
 }
 
+@keyframes pistons {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
 .slider-container {
   position: relative;
   width: 100%;
@@ -135,6 +144,16 @@
             transform-origin: 50.2% 66.5%;
             transform: rotate(-108deg);
             animation: speedometer 10s ease-in-out infinite;
+          }
+          &.pistons {
+            position: absolute;
+          }
+          &.pistons1 {
+            animation: pistons 0.6s ease-in-out 0s infinite alternate;
+          }
+          &.pistons2 {
+            transform: translateY(-30px);
+            animation: pistons 0.6s ease-in-out 0.6s infinite alternate;
           }
         }
         .shadow {
